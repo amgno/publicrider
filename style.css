@@ -5,7 +5,9 @@
 }
 
 * {
-
+    ::-webkit-scrollbar {
+        display: none;
+      }
 }
 
 
@@ -276,3 +278,14 @@ main {
     width: 100%;
     height: auto;
 }
+
+
+
+/* test animazione show hide */
+
+.xyzsection {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+

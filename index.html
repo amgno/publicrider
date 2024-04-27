@@ -34,7 +34,7 @@
 
 
     <!-- Pagina FAQ -->
-    <main id="faq" style="display: none;">
+    <main id="faq" class="xyzsection">
         <div class="titlepage">
             <xy2>FAQ</xy2>
         </div>
@@ -71,7 +71,7 @@
 
 
     <!--  -->
-    <div id="work" style="display: none;">
+    <div id="work" class="xyzsection">
         <main class="workpagemain">
             <div class="titlepage">
                 <xy2>WORK</xy2>
@@ -135,7 +135,7 @@
 
 
     <!-- about us -->
-    <main id="about" class="mainabout" style="display: none;">
+    <main id="about" class="mainabout xyzsection">
         <div class="section">
 
 
@@ -243,18 +243,33 @@
 </body>
 
 <script>
-    function showSection(sectionId) {
-        // List of all section IDs
-        var sections = ['homepage', 'service', 'faq', 'work', 'about'];
+function showSection(sectionId) {
+    var sections = ['homepage', 'service', 'faq', 'work', 'about'];
 
-        // Hide all sections
-        sections.forEach(function (id) {
-            document.getElementById(id).style.display = 'none';
-        });
+    // Hide all sections and reset styles
+    sections.forEach(function(id) {
+        var element = document.getElementById(id);
+        if (element) {
+            element.style.display = 'none';
+            element.style.opacity = 0;
+        } else {
+            console.error('Failed to find element with ID:', id);
+        }
+    });
 
-        // Show the selected section
-        document.getElementById(sectionId).style.display = 'block';
+    // Show the selected section
+    var elementToShow = document.getElementById(sectionId);
+    if (elementToShow) {
+        elementToShow.style.display = 'block';
+        // Use setTimeout to delay opacity transition after display change
+        setTimeout(() => {
+            elementToShow.style.opacity = 1;
+        }, 10); // Timeout ensures the display change has taken effect
+    } else {
+        console.error('Failed to find element with ID:', sectionId);
     }
+}
+
 
 </script>
 
