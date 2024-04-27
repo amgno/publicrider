@@ -34,40 +34,60 @@
 
 
     <!-- Pagina FAQ -->
-    <main id="faq" class="xyzsection">
-        <div class="titlepage">
-            <xy2>FAQ</xy2>
-        </div>
-        <div class="faqlist">
-            <div id="faq1">
-                <xy3>(00)</xy3>
-                <span id="faqquestion">Lorem ipsum sucaminchia</span>
-                <xy3>TEST</xy3>
-                <span id="faqanswer">Ciao come va?</span>
+    <div id="faq" class="xyzsection">
+        <main>
+            <div class="titlepage">
+                <xy2>FAQ</xy2>
             </div>
-            <div id="faq2">
-                <xy3>(01)</xy3>
-                <span id="faqquestion">Lorem ipsum sucaminchia</span>
-                <xy3>TEST</xy3>
+            <div class="faqlist">
+                <div id="faq1">
+                    <xy3>(00)</xy3>
+                    <span id="faqquestion">Lorem ipsum sucaminchia</span>
+                    <xy3>TEST</xy3>
+                    <span id="faqanswer">Ciao come va?</span>
+                </div>
+                <div id="faq2">
+                    <xy3>(01)</xy3>
+                    <span id="faqquestion">Lorem ipsum sucaminchia</span>
+                    <xy3>TEST</xy3>
+                </div>
+                <div id="faq3">
+                    <xy3>(02)</xy3>
+                    <span id="faqquestion">Lorem ipsum sucaminchia</span>
+                    <xy3>TEST</xy3>
+                </div>
+                <div id="faq4">
+                    <xy3>(03)</xy3>
+                    <span id="faqquestion">Lorem ipsum sucaminchia</span>
+                    <xy3>TEST</xy3>
+                </div>
+                <div id="faq5">
+                    <xy3>(04)</xy3>
+                    <span id="faqquestion">Lorem ipsum sucaminchia</span>
+                    <xy3>TEST</xy3>
+                </div>
             </div>
-            <div id="faq3">
-                <xy3>(02)</xy3>
-                <span id="faqquestion">Lorem ipsum sucaminchia</span>
-                <xy3>TEST</xy3>
-            </div>
-            <div id="faq4">
-                <xy3>(03)</xy3>
-                <span id="faqquestion">Lorem ipsum sucaminchia</span>
-                <xy3>TEST</xy3>
-            </div>
-            <div id="faq5">
-                <xy3>(04)</xy3>
-                <span id="faqquestion">Lorem ipsum sucaminchia</span>
-                <xy3>TEST</xy3>
-            </div>
-        </div>
 
-    </main>
+        </main>
+
+        <div class="footerwrapper">
+            <div class="footer">
+                <div id="foot1">
+                    HEADQUARTERED IN MILAN, 20135 <br>
+                    P.IVA 02510250208 <br>
+                    info@pb.rider
+                </div>
+                <div id="foot2">
+                    PRIVACY POLICY <br>
+                    TERM OF USE <br>
+                    <span onclick="showSection('faq')">FAQ</span>
+                </div>
+                <div id="foot3">
+                    <img src="./img/footerimg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--  -->
@@ -121,7 +141,7 @@
                 <div id="foot2">
                     PRIVACY POLICY <br>
                     TERM OF USE <br>
-                    FAQ
+                    <span onclick="showSection('faq')">FAQ</span>
                 </div>
                 <div id="foot3">
                     <img src="./img/footerimg.png" alt="">
@@ -227,7 +247,7 @@
                 <div id="foot2">
                     PRIVACY POLICY <br>
                     TERM OF USE <br>
-                    FAQ
+                    <span onclick="showSection('faq')">FAQ</span>
                 </div>
                 <div id="foot3">
                     <img src="./img/footerimg.png" alt="">
@@ -243,32 +263,32 @@
 </body>
 
 <script>
-function showSection(sectionId) {
-    var sections = ['homepage', 'service', 'faq', 'work', 'about'];
+    function showSection(sectionId) {
+        var sections = ['homepage', 'service', 'faq', 'work', 'about'];
 
-    // Hide all sections and reset styles
-    sections.forEach(function(id) {
-        var element = document.getElementById(id);
-        if (element) {
-            element.style.display = 'none';
-            element.style.opacity = 0;
+        // Hide all sections and reset styles
+        sections.forEach(function (id) {
+            var element = document.getElementById(id);
+            if (element) {
+                element.style.display = 'none';
+                element.style.opacity = 0;
+            } else {
+                console.error('Failed to find element with ID:', id);
+            }
+        });
+
+        // Show the selected section
+        var elementToShow = document.getElementById(sectionId);
+        if (elementToShow) {
+            elementToShow.style.display = 'block';
+            // Use setTimeout to delay opacity transition after display change
+            setTimeout(() => {
+                elementToShow.style.opacity = 1;
+            }, 10); // Timeout ensures the display change has taken effect
         } else {
-            console.error('Failed to find element with ID:', id);
+            console.error('Failed to find element with ID:', sectionId);
         }
-    });
-
-    // Show the selected section
-    var elementToShow = document.getElementById(sectionId);
-    if (elementToShow) {
-        elementToShow.style.display = 'block';
-        // Use setTimeout to delay opacity transition after display change
-        setTimeout(() => {
-            elementToShow.style.opacity = 1;
-        }, 10); // Timeout ensures the display change has taken effect
-    } else {
-        console.error('Failed to find element with ID:', sectionId);
     }
-}
 
 
 </script>
