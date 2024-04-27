@@ -65,7 +65,7 @@ body {
 
 main {
     width: 100%;
-    height: auto;
+    height: auto;    
 }
 
 .titlepage {
@@ -102,6 +102,17 @@ main {
 
 
 /* work section */
+
+#work {
+    scroll-snap-type: y mandatory;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.workpagemain {
+    background-color: aliceblue;
+    scroll-snap-align: start;
+}
 
 #worklist {
     display: grid;
