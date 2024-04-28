@@ -79,7 +79,7 @@
                 </div>
                 <div id="foot2">
                     PRIVACY POLICY <br>
-                    TERM OF USE <br>
+                    WORK WITH US<br>
                     <span onclick="showSection('faq')" style="text-decoration: underline;">FAQ</span>
                 </div>
                 <div id="foot3">
@@ -140,7 +140,7 @@
                 </div>
                 <div id="foot2">
                     PRIVACY POLICY <br>
-                    TERM OF USE <br>
+                    WORK WITH US<br>
                     <span onclick="showSection('faq')" style="text-decoration: underline;">FAQ</span>
                 </div>
                 <div id="foot3">
@@ -237,6 +237,11 @@
         </div>
 
 
+        <div class="section">
+
+        </div>
+
+
         <div class="footerwrapper">
             <div class="footer">
                 <div id="foot1">
@@ -246,7 +251,7 @@
                 </div>
                 <div id="foot2">
                     PRIVACY POLICY <br>
-                    TERM OF USE <br>
+                    WORK WITH US<br>
                     <span onclick="showSection('faq')" style="text-decoration: underline;">FAQ</span>
                 </div>
                 <div id="foot3">
@@ -260,11 +265,118 @@
     </main>
 
 
+
+
+    <main id="workwithus" class="xyzsection">
+        <main>
+            <div class="titlepage">
+                <xy2>WORK WITH US</xy2>
+            </div>
+            <div class="workwithuslist" onclick="showdescr('workwithusdescr1')">
+                <div id="workwithusposition1">
+                    <xy3>(00)</xy3>
+                    <div class="workwithuspostitle">
+                        <span class="workwithuspos">Content creator</span>
+                        <span class="workwithuspossub"><span style="color: var(--red);">/</span> Full remote</span>
+                    </div>
+
+                    <xy3>
+                        <img src="./img/arrow1.png" alt="">
+                    </xy3>
+
+                    <div id="workwithusdescr1" class="workwithusdescr" style="display: none;">
+                        <span>hello little one hello little one hello little one hello little one hello little
+                            one</span>
+                        <div class="button">Apply now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="workwithuslist" onclick="showdescr('workwithusdescr2')">
+                <div id="workwithusposition1">
+                    <xy3>(00)</xy3>
+                    <div class="workwithuspostitle">
+                        <span class="workwithuspos">Content creator</span>
+                        <span class="workwithuspossub"><span style="color: var(--red);">/</span> Full remote</span>
+                    </div>
+
+                    <xy3>
+                        <xy3>
+                            <img src="./img/arrow1.png" alt="">
+                        </xy3>
+                    </xy3>
+
+                    <div id="workwithusdescr2" class="workwithusdescr" style="display: none;">
+                        <span>hello little one hello little one hello little one hello little one hello little
+                            one</span>
+                        <div class="button">Apply now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="workwithuslist" onclick="showdescr('workwithusdescr3')">
+                <div id="workwithusposition1">
+                    <xy3>(00)</xy3>
+                    <div class="workwithuspostitle">
+                        <span class="workwithuspos">Content creator</span>
+                        <span class="workwithuspossub"><span style="color: var(--red);">/</span> Full remote</span>
+                    </div>
+
+                    <xy3>
+                        <img src="./img/arrow1.png" alt="">
+                    </xy3>
+
+                    <div id="workwithusdescr3" class="workwithusdescr" style="display: none;">
+                        <span>hello little one hello little one hello little one hello little one hello little
+                            one</span>
+                        <div class="button">Apply now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="footerwrapper">
+            <div class="footer">
+                <div id="foot1">
+                    HEADQUARTERED IN MILAN, 20135 <br>
+                    P.IVA 02510250208 <br>
+                    info@pb.rider
+                </div>
+                <div id="foot2">
+                    PRIVACY POLICY <br>
+                    WORK WITH US<br>
+                    <span onclick="showSection('faq')" style="text-decoration: underline;">FAQ</span>
+                </div>
+                <div id="foot3">
+                    <img src="./img/footerimg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
 </body>
 
 <script>
+    function showdescr(id) {
+        var element = document.getElementById(id);
+        if (element.style.display == "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+        console.log(element);
+    }
+
+
+
     function showSection(sectionId) {
-        var sections = ['homepage', 'service', 'faq', 'work', 'about'];
+        var sections = ['homepage', 'service', 'faq', 'work', 'about', 'workwithus'];
 
         // Hide all sections and reset styles
         sections.forEach(function (id) {

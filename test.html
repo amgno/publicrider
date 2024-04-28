@@ -1,24 +1,31 @@
+<script>
+
+class Footer extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <p>Copyright &copy; ${this.year} ${this.company}</p>
+    `;
+  }
+}
+
+customElements.define('footer-component', Footer);
+
+</script>
+<!-- usage -->
+
+
+
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Font Size Test</title>
-  <style>
-    .parent-div {
-      width: 300px;
-      border: 1px solid black;
-    }
-
-    .child-element {
-      font-size: 100%;
-      width: 100%;
-      text-align: center;
-      white-space: nowrap;
-    }
-  </style>
-</head>
-<body>
-  <div class="parent-div">
-    <p class="child-element">This is a very long paragraph that will wrap to a new line if the text is not set to nowrap.</p>
-  </div>
-</body>
+  <head>
+  </head>
+  <body>
+    <footer-component year="2022" company="My Company"></footer-component>
+    <footer-component year="2022" company="My sss"></footer-component>
+    <footer-component year="2022" company="My 12"></footer-component>
+    <footer-component year="2022" company="My Company"></footer-component>
+  </body>
 </html>
