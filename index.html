@@ -9,7 +9,7 @@
     <nav class="navbar">
         <div id="nav0">PUBLICRIDER</div>
         <div id="nav1">
-            <xy1>SERVICE</xy1>
+            <xy1 onclick="showSection('service')">SERVICE</xy1>
         </div>
         <div id="nav2">
             <xy1 onclick="showSection('work')">WORK</xy1>
@@ -21,15 +21,6 @@
             <xy1 id="booknow">BOOK NOW</xy1>
         </div>
     </nav>
-
-
-
-
-    <main id="homepage" style="display: none;"></main>
-    <main id="service" style="display: none;"></main>
-
-
-    <main id="booknow" style="display: none;"></main>
 
 
 
@@ -292,6 +283,55 @@
             </div>
         </main>
 
+        <footer-component></footer-component>
+    </main>
+
+
+
+    <main id="service" class="xyzsection">
+        <main id="pag1" class="section">
+            <!-- Descrizione piu anchor per portare alle diverse sezioni -->
+            <xy2>SERVICE</xy2>
+            <div class="servicedescription">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+            </div>
+            <div class="serviceanchorpoint">
+                <div id="serviceanchor1">
+                    Targeting
+                    <img src="./img/arrow2.png" alt="">
+                </div>
+                <div id="serviceanchor2">Technology
+                    <img src="./img/arrow2.png" alt="">
+                </div>
+                <div id="serviceanchor3">Slideshow
+                    <img src="./img/arrow2.png" alt="">
+                </div>
+                <div id="serviceanchor4">How we work
+                    <img src="./img/arrow2.png" alt="">
+                </div>
+                <div id="serviceanchor5">Servizi aggiuntivi
+                    <img src="./img/arrow2.png" alt="">
+                </div>
+            </div>
+        </main>
+        <main id="pag2" class="section">
+            <!-- Targeting e itinerari -->
+        </main>
+        <main id="pag3" class="section">
+            <!-- Tecnologia -->
+        </main>
+        <main id="pag4" class="section">
+            <!-- Slideshow -->
+        </main>
+        <main id="pag5" class="section">
+            <!-- Come lavoriamo -->
+        </main>
+        <main id="pag6" class="section">
+            <!-- Servizi aggiuntivi -->
+        </main>
         <footer-component></footer-component>
     </main>
 

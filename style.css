@@ -398,3 +398,76 @@ main {
 .workwithuspostitle>.workwithuspossub {
     padding-left: 10px;
 }
+
+
+
+
+/* servizi */
+#service {
+    scroll-snap-type: y mandatory;
+    height: 94vh;
+    overflow-y: scroll;
+}
+
+#service > main {
+
+}
+
+#service > #pag1 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+#service > #pag1 > xy2 {
+    font-size: 200px;
+    font-weight: 550;
+}
+
+#service > #pag1 > .servicedescription {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 40px;
+    display: flex;
+    align-items: end;
+    padding-bottom: 8vh;
+    padding-left: 1vw;
+}
+
+.serviceanchorpoint {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    align-items: start;
+    padding-left: 10vw;
+    justify-content: end;
+    padding-bottom: 8vh;
+    font-size: 40px;
+
+}
+
+.serviceanchorpoint > div {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    margin-top: 2vh;
+    position: relative;
+    cursor: pointer;
+}
+
+.serviceanchorpoint > div > img {
+    position: absolute;
+    right: 1px;
+}
+
+.serviceanchorpoint > div:hover {
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+}
+
+/* not work */
+/* .serviceanchorpoint > div:hover img {
+    filter: hue-rotate(0 360);
+    color: red;
+} */
+
+
