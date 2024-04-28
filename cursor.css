@@ -1,0 +1,37 @@
+body {
+    cursor: none;
+}
+
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--black);
+}
+
+.cursor-outline  {
+    width: 30px;
+    height: 30px;
+    /* border: 2px solid var(--black); */
+    background-color: var(--red);
+    opacity: 50%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    color: white;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+}
+

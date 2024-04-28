@@ -2,11 +2,18 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursor.css">
     <title>home</title>
 </head>
 
 <body>
-    <nav class="navbar">
+
+    <!-- per custom cursor -->
+    <div class="cursor-dot" data-cursor-dot id="cursordot"></div>
+    <div class="cursor-outline" data-cursor-outline id="cursorout"></div>
+    <script src="cursor.js"></script>
+
+    <nav class="navbar" id="navbar">
         <div id="nav0">PUBLICRIDER</div>
         <div id="nav1">
             <xy1 onclick="showSection('service')">SERVICE</xy1>
@@ -464,6 +471,46 @@
     }
 
     customElements.define('footer-component', Footer);
+
+
+
+
+    const cursor = document.getElementById('cursorout');
+    const navbar = document.getElementById('navbar');
+    const worksection = document.getElementById('worklist');
+
+    // Add event listener to the navbar
+    navbar.addEventListener('mouseover', () => {
+        cursor.innerHTML = "CLICK ME";
+        cursor.style.width = "100px";
+        cursor.style.height = "100px";
+        // cursor.style.borderRadius = "10px";
+        cursor.style.opacity = "80%";
+    });
+
+    navbar.addEventListener('mouseout', () => {
+        cursor.innerHTML = "";
+        cursor.style.width = "30px";
+        cursor.style.height = "30px";
+        cursor.style.borderRadius = "50px";
+        cursor.style.opacity = "50%";
+    });
+
+    worksection.addEventListener('mouseover', () => {
+        cursor.innerHTML = "SCROLL DOWN";
+        cursor.style.width = "100px";
+        cursor.style.height = "100px";
+        // cursor.style.borderRadius = "10px";
+        cursor.style.opacity = "80%";
+    });
+
+    worksection.addEventListener('mouseout', () => {
+        cursor.innerHTML = "";
+        cursor.style.width = "30px";
+        cursor.style.height = "30px";
+        cursor.style.borderRadius = "50px";
+        cursor.style.opacity = "50%";
+    });
 
 
 </script>
