@@ -315,6 +315,8 @@ main {
     overflow-y: scroll;
 }
 
+
+
 #workwithus > main {
     scroll-snap-align: start;
 }
@@ -341,6 +343,11 @@ main {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.workwithuslist:hover {
+    opacity: 65%;
 }
 
 .workwithuslist>div {
