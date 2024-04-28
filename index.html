@@ -479,39 +479,35 @@
     const navbar = document.getElementById('navbar');
     const worksection = document.getElementById('worklist');
 
+
+    function hovercursor(text, num) {
+        if (num == 1) {
+            cursor.innerHTML = text;
+            cursor.style.width = "80px";
+            cursor.style.height = "80px";
+            // cursor.style.borderRadius = "10px";
+            cursor.style.opacity = "80%";
+        } else {
+            cursor.innerHTML = "";
+            cursor.style.width = "30px";
+            cursor.style.height = "30px";
+            cursor.style.borderRadius = "50px";
+            cursor.style.opacity = "50%";
+        }
+    }
+
     // Add event listener to the navbar
-    navbar.addEventListener('mouseover', () => {
-        cursor.innerHTML = "CLICK ME";
-        cursor.style.width = "100px";
-        cursor.style.height = "100px";
-        // cursor.style.borderRadius = "10px";
-        cursor.style.opacity = "80%";
-    });
+    navbar.addEventListener('mouseover', () => { hovercursor("CLICK", 1) });
+    navbar.addEventListener('mouseout', () => { hovercursor("CIAO", 0) });
 
-    navbar.addEventListener('mouseout', () => {
-        cursor.innerHTML = "";
-        cursor.style.width = "30px";
-        cursor.style.height = "30px";
-        cursor.style.borderRadius = "50px";
-        cursor.style.opacity = "50%";
-    });
+    worksection.addEventListener('mouseover', () => { hovercursor("SCROLL", 1) });
+    worksection.addEventListener('mouseout', () => { hovercursor("CIAO", 0) });
 
-    worksection.addEventListener('mouseover', () => {
-        cursor.innerHTML = "SCROLL DOWN";
-        cursor.style.width = "100px";
-        cursor.style.height = "100px";
-        // cursor.style.borderRadius = "10px";
-        cursor.style.opacity = "80%";
+    const imgdivheroes = document.querySelectorAll('.imgdivheroes');
+    imgdivheroes.forEach((imgdivheroes) => {
+        imgdivheroes.addEventListener('mouseover', () => { hovercursor("LINKDIN", 1) });
+        imgdivheroes.addEventListener('mouseout', () => { hovercursor("CIAO", 0) });
     });
-
-    worksection.addEventListener('mouseout', () => {
-        cursor.innerHTML = "";
-        cursor.style.width = "30px";
-        cursor.style.height = "30px";
-        cursor.style.borderRadius = "50px";
-        cursor.style.opacity = "50%";
-    });
-
 
 </script>
 
