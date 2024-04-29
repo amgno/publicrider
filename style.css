@@ -471,3 +471,56 @@ main {
 } */
 
 
+/* pag6 */
+.pag6grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 97%;
+    gap: 1vw;
+}
+
+.pag6title > #pag6titlebig {
+    font-size: 60px;
+}
+
+.pag6title > #pag6titlesmall {
+    font-size: 20px
+}
+
+.pag6desc {
+    font-size: 40px;
+}
+
+.pag6bullet {
+    display: flex;
+    flex-direction: column;
+    grid-row: 3;
+}
+
+.pag6bullet > div {
+    border-top: 1px solid grey;
+    font-size: 40px;
+    opacity: 60%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.pag6bullet > div:hover {
+    color: var(--red);
+    /* border-top: 1px solid var(--red); */
+    opacity: 100%;
+}
+
+.pag6bullet > div > img {
+    position: absolute;
+    right: 1px;
+}
+
+.pag6bullet > div > span {
+    font-size: 20px;
+    display: none;
+    padding-top: 1vh;
+}

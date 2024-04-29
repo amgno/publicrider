@@ -324,7 +324,9 @@
                 </div>
             </div>
         </main>
+
         <main id="pag2" class="section">
+            
             <!-- Targeting e itinerari -->
         </main>
         <main id="pag3" class="section">
@@ -336,8 +338,81 @@
         <main id="pag5" class="section">
             <!-- Come lavoriamo -->
         </main>
-        <main id="pag6" class="section">
-            <!-- Servizi aggiuntivi -->
+
+
+        <!-- Da sistemare il fatto di quando clicco e si allunga verso l'alto -->
+        <main id="pag6" class="section"">
+            <div class=" pag6grid">
+            <div class="pag6title">
+                <span id="pag6titlebig">Additinal services</span>
+                <span id="pag6titlesmall">(8)</span>
+            </div>
+            <div class="pag6desc">
+                <span id="pag6desctext">
+                    Lorem ipsum dolor sit amet, consectetur dipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur dipiscing elit,
+                    Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                </span>
+            </div>
+            <div class="pag6bullet">
+                <div onclick="showdescr('pag6bullet1desc')">Landing page
+                    <img src="./img/plus1.png" alt=""> <br>
+                        <span id="pag6bullet1desc">
+                            Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                        </span>
+                </div>
+
+                <div onclick="showdescr('pag6bullet2desc')">Newsletter and CRM
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet2desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+
+                <div onclick="showdescr('pag6bullet3desc')">Consulenza grafica
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet3desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+
+                <div onclick="showdescr('pag6bullet4desc')">Creazione grafiche pubblicitarie
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet4desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+            </div>
+            <div class="pag6bullet">
+                <div onclick="showdescr('pag6bullet5desc')">Noleggio temporary store
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet5desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+
+                <div onclick="showdescr('pag6bullet6desc')">Vestiario personalizzato
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet6desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+
+                <div onclick="showdescr('pag6bullet7desc')">Assunzione modelli / e
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet7desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+
+                <div onclick="showdescr('pag6bullet8desc')">Fotografo e Videomaker
+                    <img src="./img/plus1.png" alt=""><br>
+                    <span id="pag6bullet8desc">
+                        Lorem ipsum dolor sit amet, consectetur dipiscing elit
+                    </span>
+                </div>
+            </div>
+            </div>
         </main>
         <footer-component></footer-component>
     </main>
@@ -348,12 +423,15 @@
 <script>
     function showdescr(id) {
         var element = document.getElementById(id);
-        if (element.style.display == "none") {
-            element.style.display = "block";
+        if (element === null) {
+            console.log("Element not found");
         } else {
-            element.style.display = "none";
+            if (element.style.display == "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
         }
-        console.log(element);
     }
 
 
