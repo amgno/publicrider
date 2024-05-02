@@ -571,3 +571,174 @@ main {
     justify-items: center;
     color: var(--red);
 }
+
+
+/* techonology page */
+
+.pag3grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    grid-template-rows: 0.5fr 1fr;
+    height: 97%;
+    gap: 1vw;
+}
+
+.pag3title > #pag3titlebig {
+    font-size: 60px;
+}
+
+.pag3title > #pag3titlesmall {
+    font-size: 20px
+}
+
+.pag3desc {
+    display: flex;
+    /* justify-items: center;
+    align-items: center; */
+    grid-column: 2;
+    font-size: 30px;
+    opacity: 80%;
+}
+
+.pag3detailgrid {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+    grid-template-rows: 1fr 1fr;
+}
+
+.pag3detailgrid > div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.pag3cricle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--red);
+    margin-bottom: 10px;
+}
+
+.pag3detailgridtitle {
+    font-size: 40px;
+    opacity: 50%;
+    margin-bottom: 10px;
+}
+.pag3detailgriddesc {
+    font-size: 20px;
+}
+
+
+
+/* circuiti */
+.pag4grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    grid-template-rows: 1fr 1fr;
+    height: 97%;
+    gap: 1vw;
+}
+
+.pag4title > #pag4titlebig {
+    font-size: 60px;
+}
+
+.pag4title > #pag4titlesmall {
+    font-size: 20px
+}
+
+.pag4desc {
+    display: flex;
+    /* justify-items: center; */
+    /* align-items: center; */
+    grid-column: 2;
+    font-size: 30px;
+    opacity: 80%;
+    flex-direction: column;
+}
+
+.pag4desc > span {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+
+.pag4detailgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/3;
+}
+
+.pag4detailgrid > div {
+    font-size: 40px;
+    border-left: 1px solid grey;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pag4detailgriddesc {
+    font-size: 30px;
+    opacity: 50%;
+    position: absolute;
+    bottom: 1px;
+}
+
+
+/* pag5 */
+.pag5grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   
+    grid-template-rows: 1fr 1fr;
+    height: 97%;
+    gap: 1vw;
+}
+
+.pag5title > #pag5titlebig {
+    font-size: 60px;
+}
+
+.pag5title > #pag5titlesmall {
+    font-size: 20px
+}
+
+.pag5desc {
+    font-size: 30px;
+}
+
+.pag5details {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 1/3;
+}
+
+.pag5details > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pag5descnumber {
+    font-size: 210px;
+    font-weight: 600;
+}
+
+.pag5descdetail {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-items: flex-start;
+}
+
+.pag5descdetail > span {
+    font-size: 40px;
+    opacity: 50%;
+}
