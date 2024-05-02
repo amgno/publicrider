@@ -25,13 +25,13 @@
             <xy1 onclick="showSection('about')">ABOUT US</xy1>
         </div>
         <div id="nav4">
-            <xy1 id="booknow">BOOK NOW</xy1>
+            <xy1 id="booknow" onclick="showSection('booknowsection')">BOOK NOW</xy1>
         </div>
     </nav>
 
 
 
-    <!-- Pagina FAQ -->
+    <!--  FAQ -->
     <div id="faq" class="xyzsection">
         <main>
             <div class="titlepage">
@@ -72,7 +72,7 @@
     </div>
 
 
-    <!--  -->
+    <!-- work -->
     <div id="work" class="xyzsection">
         <main class="workpagemain">
             <div class="titlepage">
@@ -115,9 +115,6 @@
         </main>
         <footer-component></footer-component>
     </div>
-
-
-
 
 
     <!-- about us -->
@@ -216,7 +213,7 @@
 
 
 
-
+    <!-- work with us -->
     <main id="workwithus" class="xyzsection">
         <main>
             <div class="titlepage">
@@ -294,7 +291,7 @@
     </main>
 
 
-
+    <!-- services -->
     <main id="service" class="xyzsection">
         <main id="pag1" class="section">
             <!-- Descrizione piu anchor per portare alle diverse sezioni -->
@@ -484,7 +481,7 @@
                     </div>
                 </div>
 
-                
+
             </div>
         </main>
 
@@ -566,6 +563,25 @@
         <footer-component></footer-component>
     </main>
 
+    <!-- Book now -->
+    <main id="booknowsection" class="xyzsection">
+        <main>
+            <div class="titlepage">
+                <xy2>BOOK NOW</xy2>
+            </div>
+            <div class="booknowsectiondesc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </div>
+            <div class="bookform">
+                
+            </div>
+        </main>
+    </main>
+
+
+
 
 </body>
 
@@ -586,7 +602,7 @@
 
 
     function showSection(sectionId) {
-        var sections = ['homepage', 'service', 'faq', 'work', 'about', 'workwithus'];
+        var sections = ['homepage', 'service', 'faq', 'work', 'about', 'workwithus', 'booknowsection'];
 
         // Hide all sections and reset styles
         sections.forEach(function (id) {
@@ -609,6 +625,14 @@
             }, 10); // Timeout ensures the display change has taken effect
         } else {
             console.error('Failed to find element with ID:', sectionId);
+        }
+
+        if (sectionId == 'booknowsection') {
+            document.body.style.background = "var(--red)";
+            document.documentElement.style.setProperty('--black', 'F5F5F5');
+        } else {
+            document.body.style.background = "var(--white)";
+            document.documentElement.style.setProperty('--black', '010B13');
         }
     }
 

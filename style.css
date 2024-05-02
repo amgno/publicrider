@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 10px;
     background-color: var(white);
+    color: var(--black);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -741,4 +742,32 @@ main {
 .pag5descdetail > span {
     font-size: 40px;
     opacity: 50%;
+}
+
+
+
+/* book now section */
+
+#booknowsection > main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    height: 90%;
+}
+
+#booknowsection > main > .titlepage {
+    grid-column: 1/3;
+}
+
+.booknowsectiondesc {
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 100px;
+}
+
+/* cancellare in futuro */
+
+.bookform {
+    background-color: grey;
+    border-radius: 14px;
 }
