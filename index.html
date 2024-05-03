@@ -14,7 +14,8 @@
     <script src="cursor.js"></script>
 
     <nav class="navbar" id="navbar">
-        <div id="nav0">PUBLICRIDER</div>
+        <div id="nav0" onclick="showSection('homepage')">PUBLICRIDER</div>
+
         <div id="nav1">
             <xy1 onclick="showSection('service')" id="servicenav">SERVICE</xy1>
         </div>
@@ -611,11 +612,20 @@
     </main>
 
 
+    <main id="homepage" class="xyzsection homepage">
+        <div class="homepagecontainer">
+            <div id="scritta">
+                WE ARE <br>
+                PUBLIC RIDER
+            </div>
+        </div>
+    </main>
 
 
 </body>
 
 <script>
+
     function showdescr(id) {
         var element = document.getElementById(id);
         if (element === null) {
@@ -636,9 +646,10 @@
 
         // Hide all sections and reset styles
         var navids = ['servicenav', 'worknav', 'aboutnav']
-        navids.forEach(function (id){
+        navids.forEach(function (id) {
             var elementid = document.getElementById(id);
             elementid.style.border = "";
+            elementid.style.opacity = "50%";
         });
 
         sections.forEach(function (id) {
