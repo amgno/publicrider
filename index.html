@@ -16,13 +16,13 @@
     <nav class="navbar" id="navbar">
         <div id="nav0">PUBLICRIDER</div>
         <div id="nav1">
-            <xy1 onclick="showSection('service')">SERVICE</xy1>
+            <xy1 onclick="showSection('service')" id="servicenav">SERVICE</xy1>
         </div>
         <div id="nav2">
-            <xy1 onclick="showSection('work')">WORK</xy1>
+            <xy1 onclick="showSection('work')" id="worknav">WORK</xy1>
         </div>
         <div id="nav3">
-            <xy1 onclick="showSection('about')">ABOUT US</xy1>
+            <xy1 onclick="showSection('about')" id="aboutnav">ABOUT US</xy1>
         </div>
         <div id="nav4">
             <xy1 id="booknow" onclick="showSection('booknowsection')">BOOK NOW</xy1>
@@ -635,6 +635,12 @@
         var sections = ['homepage', 'service', 'faq', 'work', 'about', 'workwithus', 'booknowsection'];
 
         // Hide all sections and reset styles
+        var navids = ['servicenav', 'worknav', 'aboutnav']
+        navids.forEach(function (id){
+            var elementid = document.getElementById(id);
+            elementid.style.border = "";
+        });
+
         sections.forEach(function (id) {
             var element = document.getElementById(id);
             if (element) {
@@ -642,6 +648,22 @@
                 element.style.opacity = 0;
             } else {
                 console.error('Failed to find element with ID:', id);
+            }
+            if (sectionId == 'service') {
+                var elementidnav = document.getElementById('servicenav');
+                elementidnav.style.opacity = "100%";
+                elementidnav.style.borderBottom = "2px solid grey";
+                console.log(sectionId);
+            } else if (sectionId == 'work') {
+                var elementidnav = document.getElementById('worknav');
+                elementidnav.style.opacity = "100%";
+                elementidnav.style.borderBottom = "2px solid grey";
+                console.log(sectionId);
+            } else if (sectionId == 'about') {
+                var elementidnav = document.getElementById('aboutnav');
+                elementidnav.style.opacity = "100%";
+                elementidnav.style.borderBottom = "2px solid grey";
+                console.log(sectionId);
             }
         });
 
