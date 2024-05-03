@@ -681,6 +681,12 @@
         // Show the selected section
         var elementToShow = document.getElementById(sectionId);
         if (elementToShow) {
+            console.log(elementToShow + "" + sectionId)
+            if (sectionId !== 'homepage'){
+                var homepageid = document.getElementById('homepage');
+                homepageid.style.display = 'none';
+                console.log("cio")
+            }
             elementToShow.style.display = 'block';
             // Use setTimeout to delay opacity transition after display change
             setTimeout(() => {
@@ -706,80 +712,107 @@
             this.attachShadow({ mode: 'open' });
             this.shadowRoot.innerHTML = `
             <style>
-                .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 20vh;
-    /* scroll-snap-align: start; */
-    align-items: end;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: 15vh;
-    width: 100%;
-}
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
 
-.footer>#foot2 {
-    grid-column: 4;
-    text-align: end;
-}
+    .footer {
+        font-size: 22px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100%;
+        /* scroll-snap-align: start; */
+        align-items: end;
+        /* text-transform: uppercase; */
+        position: relative;
+        width: 100%;
+        margin-top: 100px;
+    }
 
-.footer>#foot4 {
-    grid-column: 2;
-    text-align: start;
-}
+    .footer>div {
+        position: absolute;
+        top: 1px;
+    }
 
-.footer>#foot3 {
-    text-align: center;
-    /* font-size: 16vw; */
-    font-weight: 600;
-    width: 100%;
-    grid-row: 2;
-    grid-column: 1/5;
-    padding: 0;
-    margin: 0;
-}
+    .footer>#foot2 {
+        grid-column: 4;
+    }
 
-.footerwrapper {
-    scroll-snap-align: start;
-    height: 90vh;
-    position: relative
-}
+    .footer>#foot4 {
+        grid-column: 3;
+        text-align: start;
+    }
 
-#foottitle {
-    font-size: 15.85vw;
-    padding: 0;
-    margin: 0;
-}
+    .footer>#foot3 {
+        /* font-size: 16vw; */
+        font-weight: 600;
+        width: 100%;
+        grid-row: 2;
+        grid-column: 1/5;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
 
-#foot3>img {
-    padding-top: 10px;
-    width: 100%;
-    height: auto;
-}
+    .footerwrapper {
+        scroll-snap-align: start;
+        height: 90vh;
+        position: relative;
+    }
 
+    .arrowfooter {
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    #foottitle {
+        font-size: 15.85vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    #foot3>img {
+        padding-top: 10px;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 30px;
+    }
 </style>
 
-            <div class="footerwrapper">
-            <div class="footer">
-                <div id="foot1">
-                    HEADQUARTERED IN MILAN, 20135 <br>
-                    P.IVA 02510250208 <br>
-                    info@pb.ridelll <br>
-                </div>
-                <div id="foot4">
-                    
-                </div>
-                <div id="foot2">
-                    PRIVACY POLICY <br>
-                    <span onclick="showSection('workwithus')" style="text-decoration: underline;">WORK WITH US</span><br>
-                    <span onclick="showSection('faq')" style="text-decoration: underline;">FAQ</span>
-                </div>
-                <div id="foot3">
-                    <img src="./img/footerimg.png" alt="">
-                </div>
-            </div>
+<div class="footerwrapper">
+    <div class="footer">
+        <div id="foot1">
+            2024 PUBLICRIDER <br>
+            HEADQUARTERED IN MILAN, 20135 <br>
+            P.IVA 02510250208 <br>
+            info@pb.ridelll <br>
         </div>
+        <div id="foot4">
+            <span style="font-weight: 600;">Get in touch</span><br>
+            <img class="arrowfooter" src="img/arrow2.png" alt="">
+            <span onclick="showSection('workwithus')" style="">Work with us</span><br>
+            <img class="arrowfooter" src="img/arrow2.png" alt="">
+            <span onclick="showSection('faq')" style="">Faq</span> <br>
+            <img class="arrowfooter" src="img/arrow2.png" alt="">
+            <span onclick="showSection('faq')" style="">Privacy Policy</span>
+
+        </div>
+        <div id="foot2">
+            <span style="font-weight: 600;">Socials</span><br>
+            <img class="arrowfooter" src="img/arrow2.png" alt="">
+            <span>Instagram</span><br>
+
+            <img class="arrowfooter" src="img/arrow2.png" alt="">
+            <span>LinkedIn</span><br>
+
+        </div>
+        <div id="foot3">
+            <img src="./img/footerimg.png" alt="">
+        </div>
+    </div>
+</div>
     `;
         }
     }
@@ -806,12 +839,12 @@
             cursor.style.width = "30px";
             cursor.style.height = "30px";
             cursor.style.borderRadius = "50px";
-            cursor.style.opacity = "50%";
+            cursor.style.opacity = "100%";
         }
     }
 
     // Add event listener to the navbar
-    navbar.addEventListener('mouseover', () => { hovercursor("CLICK", 1) });
+    navbar.addEventListener('mouseover', () => { hovercursor("", 1) });
     navbar.addEventListener('mouseout', () => { hovercursor("CIAO", 0) });
 
     worksection.addEventListener('mouseover', () => { hovercursor("SCROLL", 1) });

@@ -6,15 +6,15 @@ body {
 .cursor-dot {
     width: 5px;
     height: 5px;
-    background-color: var(--black);
+    background-color: var(--red);
 }
 
 .cursor-outline  {
-    width: 30px;
-    height: 30px;
-    /* border: 2px solid var(--black); */
-    background-color: var(--red);
-    opacity: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1.5px solid var(--red);
+    /* background-color: var(--red); */
+    opacity: 100%;
     text-align: center;
     align-items: center;
     justify-items: center;
