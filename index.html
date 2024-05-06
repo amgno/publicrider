@@ -625,6 +625,11 @@
 </body>
 
 <script>
+    const cursor = document.getElementById('cursorout');
+    const cursordor = document.getElementById('cursordot');
+    const navbar = document.getElementById('navbar');
+    const worksection = document.getElementById('worklist');
+
 
     function showdescr(id) {
         var element = document.getElementById(id);
@@ -682,7 +687,7 @@
         var elementToShow = document.getElementById(sectionId);
         if (elementToShow) {
             console.log(elementToShow + "" + sectionId)
-            if (sectionId !== 'homepage'){
+            if (sectionId !== 'homepage') {
                 var homepageid = document.getElementById('homepage');
                 homepageid.style.display = 'none';
                 console.log("cio")
@@ -699,9 +704,13 @@
         if (sectionId == 'booknowsection') {
             document.body.style.background = "var(--red)";
             document.documentElement.style.setProperty('--black', 'F5F5F5');
+            cursor.style.border = "1px solid var(--white)"
+            cursordor.style.backgroundColor = "var(--white)"
         } else {
             document.body.style.background = "var(--white)";
             document.documentElement.style.setProperty('--black', '010B13');
+            cursor.style.border = "1px solid var(--red)"
+            cursordor.style.backgroundColor = "var(--red)"
         }
     }
 
@@ -822,9 +831,7 @@
 
 
 
-    const cursor = document.getElementById('cursorout');
-    const navbar = document.getElementById('navbar');
-    const worksection = document.getElementById('worklist');
+
 
 
     function hovercursor(text, num) {
