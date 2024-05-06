@@ -987,6 +987,10 @@ select {
     font-weight: 600;
 }
 
+#scritta > img {
+    width: 90%;
+}
+
 
 
 
