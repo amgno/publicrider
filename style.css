@@ -938,6 +938,7 @@ select {
     color: var(--white);
     opacity: 80%;
     border-bottom: 1px solid var(--white);
+    -webkit-appearance: none;
 }
 
 #message {
