@@ -378,7 +378,7 @@ main {
 
 
 #workwithus {
-    height: 95vh;
+    height: 90vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }

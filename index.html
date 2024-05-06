@@ -14,16 +14,16 @@
     <script src="cursor.js"></script>
 
     <nav class="navbar" id="navbar">
-        <div id="nav0" onclick="showSection('homepage')">PUBLICRIDER</div>
+        <div id="nav0" onclick="showSection('homepage'); location.href='#homepage';">PUBLICRIDER</div>
 
         <div id="nav1">
-            <xy1 onclick="showSection('service')" id="servicenav">SERVICE</xy1>
+            <xy1 onclick="showSection('service'); location.href='#pag1';" id="servicenav">SERVICE</xy1>
         </div>
         <div id="nav2">
-            <xy1 onclick="showSection('work')" id="worknav">WORK</xy1>
+            <xy1 onclick="showSection('work'); location.href='#works';" id="worknav">WORK</xy1>
         </div>
         <div id="nav3">
-            <xy1 onclick="showSection('about')" id="aboutnav">ABOUT US</xy1>
+            <xy1 onclick="showSection('about');  location.href='#aboutus';" id="aboutnav">ABOUT US</xy1>
         </div>
         <div id="nav4">
             <xy1 id="booknow" onclick="showSection('booknowsection')">BOOK NOW</xy1>
@@ -34,7 +34,7 @@
 
     <!--  FAQ -->
     <div id="faq" class="xyzsection">
-        <main>
+        <main id="FAQ">
             <div class="titlepage">
                 <xy2>FAQ</xy2>
             </div>
@@ -75,7 +75,7 @@
 
     <!-- work -->
     <div id="work" class="xyzsection">
-        <main class="workpagemain">
+        <main class="workpagemain" id="works">
             <div class="titlepage">
                 <xy2>WORK</xy2>
             </div>
@@ -120,7 +120,7 @@
 
     <!-- about us -->
     <main id="about" class="mainabout xyzsection">
-        <div class="section">
+        <div class="section" id="aboutus">
 
 
             <div class="titlepage">
@@ -246,7 +246,7 @@
 
     <!-- work with us -->
     <main id="workwithus" class="xyzsection">
-        <main>
+        <main id="workwithUS">
             <div class="titlepage">
                 <xy2>WORK WITH US</xy2>
             </div>
@@ -686,11 +686,10 @@
         // Show the selected section
         var elementToShow = document.getElementById(sectionId);
         if (elementToShow) {
-            console.log(elementToShow + "" + sectionId)
+            console.log(elementToShow + "" + sectionId);
             if (sectionId !== 'homepage') {
                 var homepageid = document.getElementById('homepage');
                 homepageid.style.display = 'none';
-                console.log("cio")
             }
             elementToShow.style.display = 'block';
             // Use setTimeout to delay opacity transition after display change
@@ -801,11 +800,11 @@
         <div id="foot4">
             <span style="font-weight: 600;">Get in touch</span><br>
             <img class="arrowfooter" src="img/arrow2.png" alt="">
-            <span onclick="showSection('workwithus')" style="">Work with us</span><br>
+            <span onclick="showSection('workwithus'); location.href='#workwithUS';" style="">Work with us</span><br>
             <img class="arrowfooter" src="img/arrow2.png" alt="">
-            <span onclick="showSection('faq')" style="">Faq</span> <br>
+            <span onclick="showSection('faq'); location.href='#FAQ';" style="">Faq</span> <br>
             <img class="arrowfooter" src="img/arrow2.png" alt="">
-            <span onclick="showSection('faq')" style="">Privacy Policy</span>
+            <span onclick="showSection('privacy')" style="">Privacy Policy</span>
 
         </div>
         <div id="foot2">
