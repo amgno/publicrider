@@ -1,3 +1,6 @@
+* {
+    scroll-behavior: smooth;
+}
 :root {
     --black: #010B13;
     --white: #F5F5F5;
