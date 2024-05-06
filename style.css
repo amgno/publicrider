@@ -883,3 +883,28 @@ main {
     font-size: 200px;
     font-weight: 600;
 }
+
+
+
+
+/* privacy */
+.privacy {
+    height: 90vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.privacytext {
+    font-size: 25px;
+    grid-row: 2;
+    opacity: 80%;
+    padding-left: 10px;
+}
+
+#pravacypage > main {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    /* height: auto; */
+    min-height: 200vh;
+    scroll-snap-align: start;
+}
