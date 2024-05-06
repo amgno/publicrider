@@ -608,14 +608,42 @@
                 ex ea commodo consequat.
             </div>
             <div class="bookform">
-                <!-- form.123formbuilder.com script begins here -->
-                <iframe allowTransparency="true" style="min-height:300px; height:inherit; overflow:auto;" width="100%"
-                    id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0"
-                    src="https://form.123formbuilder.com/my-contact-form-6664864.html?customVars123=yes&hasEmbedFormStyle=1">
-                    <p>Your browser does not support iframes. The contact form cannot be displayed. Please use another
-                        contact method (phone, fax etc)</p>
-                </iframe>
-                <!-- form.123formbuilder.com script ends here -->
+                <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/mkndyyyy"
+                    method="post">
+                    <fieldset id="fs-frm-inputs">
+                        <input type="text" name="fullname" id="first-name" placeholder="Full name" required="">
+                        <input type="text" name="company" id="last-name" placeholder="Company name" required="">
+                        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
+                            required="">
+                        <input type="number" name="phonenumber" id="phonenumber" placeholder="Phone Number" required="">
+                        <fieldset id="fs-frm-selects">
+                            <!-- <label for="timely">1. The service provided was completed in a timely manner.</label> -->
+                            <select name="timely" id="timely" required="">
+                                <option value="" selected="" disabled="">Select your city</option>
+                                <option value="1">Milan</option>
+                                <option value="3">Agree</option>
+                                <option value="5">Neutral</option>
+                                <option value="7">Disagree</option>
+                                <option value="9">Strongly Disagree</option>
+                            </select>
+                            <!-- <label for="timely">2. The quality of work was high in quality.</label> -->
+                            <select name="quality" id="quality" required="">
+                                <option value="" selected="" disabled="">Select your circuit</option>
+                                <option value="1">Strongly Agree</option>
+                                <option value="3">Agree</option>
+                                <option value="5">Neutral</option>
+                                <option value="7">Disagree</option>
+                                <option value="9">Strongly Disagree</option>
+                            </select>
+                        </fieldset>
+                        
+                        <textarea rows="3" name="message" id="message"
+                            placeholder="Additional comments here"
+                            required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
+                    </fieldset>
+                    <input type="submit" value="Send Responses">
+                </form>
             </div>
         </main>
     </main>
